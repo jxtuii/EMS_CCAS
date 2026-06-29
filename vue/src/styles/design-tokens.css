@@ -1,0 +1,458 @@
+/* ============================================
+   湘大教务管理系统 — 全局主题样式
+   EMS-main 风格：深海军蓝侧边栏 + Element Plus 蓝主色调
+   ============================================ */
+
+:root {
+  /* ===== EMS-main Color Tokens ===== */
+  --ems-primary: #409eff;
+  --ems-primary-dark: #337ecc;
+  --ems-primary-light: #66b1ff;
+  --ems-sidebar-bg: #001529;
+  --ems-sidebar-logo-bg: #002140;
+  --ems-sidebar-text: #a6adb4;
+  --ems-sidebar-text-hover: #ffffff;
+  --ems-sidebar-active-bg: #1890ff;
+  --ems-header-bg: #ffffff;
+  --ems-main-bg: #f4f6f9;
+  --ems-card-bg: #ffffff;
+  --ems-card-radius: 5px;
+  --ems-table-header-bg: #f8f8f8;
+  --ems-table-header-color: #666666;
+  --ems-border-color: #ebeef5;
+  --ems-text-primary: #333333;
+  --ems-text-secondary: #666666;
+  --ems-text-muted: #909399;
+  --ems-link-color: #2a60c9;
+
+  /* ===== Element Plus Overrides ===== */
+  --el-color-primary: #409eff;
+  --el-color-primary-dark-2: #337ecc;
+  --el-color-primary-light-3: #79bbff;
+  --el-color-primary-light-5: #a0cfff;
+  --el-color-primary-light-7: #c6e2ff;
+  --el-color-primary-light-8: #d9ecff;
+  --el-color-primary-light-9: #ecf5ff;
+  --el-color-success: #67c23a;
+  --el-color-warning: #e6a23c;
+  --el-color-danger: #f56c6c;
+  --el-color-info: #909399;
+  --el-color-white: #ffffff;
+  --el-color-black: #000000;
+
+  /* Border Colors */
+  --el-border-color: #dcdfe6;
+  --el-border-color-light: #e4e7ed;
+  --el-border-color-lighter: #ebeef5;
+  --el-border-color-extra-light: #f2f6fc;
+  --el-border-color-dark: #d4d7de;
+
+  /* Border Radius */
+  --el-border-radius-base: 4px;
+  --el-border-radius-small: 2px;
+  --el-border-radius-round: 20px;
+  --el-border-radius-circle: 100%;
+
+  /* Typography — system fonts (no custom import) */
+  --el-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  --el-font-size-base: 14px;
+  --el-font-size-small: 13px;
+  --el-font-size-large: 16px;
+  --el-font-size-extra-large: 18px;
+  --el-font-weight-primary: 500;
+
+  /* Text Colors */
+  --el-text-color-primary: #303133;
+  --el-text-color-regular: #606266;
+  --el-text-color-secondary: #909399;
+  --el-text-color-placeholder: #c0c4cc;
+  --el-text-color-disabled: #c0c4cc;
+
+  /* Background */
+  --el-bg-color: #ffffff;
+  --el-bg-color-overlay: #ffffff;
+  --el-bg-color-page: #f4f6f9;
+  --el-fill-color: #f0f2f5;
+  --el-fill-color-light: #f5f7fa;
+  --el-fill-color-lighter: #fafafa;
+  --el-fill-color-blank: #ffffff;
+  --el-fill-color-dark: #ebedf0;
+
+  /* Mask & Shadow */
+  --el-mask-color: rgba(0, 0, 0, 0.32);
+  --el-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  --el-box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --el-box-shadow-lighter: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --el-box-shadow-dark: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Global Element Overrides ===== */
+
+/* Cards — 5px radius, subtle shadow, EMS-main style */
+.el-card {
+  border-radius: 5px !important;
+  border: none !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1) !important;
+  overflow: hidden;
+}
+.el-card__header {
+  padding: 14px 20px !important;
+  border-bottom: 1px solid var(--el-border-color-lighter) !important;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--el-text-color-primary);
+}
+.el-card__body {
+  padding: 18px 20px !important;
+}
+
+/* Primary Button — blue fill, white text */
+.el-button--primary {
+  --el-button-bg-color: var(--el-color-primary);
+  --el-button-text-color: #ffffff;
+  --el-button-border-color: var(--el-color-primary);
+  --el-button-hover-bg-color: var(--el-color-primary-light-3);
+  --el-button-hover-text-color: #ffffff;
+  --el-button-hover-border-color: var(--el-color-primary-light-3);
+  --el-button-active-bg-color: var(--el-color-primary-dark-2);
+  --el-button-active-text-color: #ffffff;
+  --el-button-active-border-color: var(--el-color-primary-dark-2);
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* Default/Outline Button — EMS-main style */
+.el-button--default {
+  --el-button-bg-color: #ffffff;
+  --el-button-text-color: var(--el-text-color-regular);
+  --el-button-border-color: var(--el-border-color);
+  --el-button-hover-bg-color: #ffffff;
+  --el-button-hover-text-color: var(--el-color-primary);
+  --el-button-hover-border-color: var(--el-color-primary);
+  --el-button-active-bg-color: #ffffff;
+  --el-button-active-text-color: var(--el-color-primary-dark-2);
+  --el-button-active-border-color: var(--el-color-primary-dark-2);
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* Success Button */
+.el-button--success {
+  --el-button-bg-color: var(--el-color-success);
+  --el-button-text-color: #ffffff;
+  --el-button-border-color: var(--el-color-success);
+  --el-button-hover-bg-color: #85ce61;
+  --el-button-hover-text-color: #ffffff;
+  --el-button-hover-border-color: #85ce61;
+  --el-button-active-bg-color: #529b2e;
+  --el-button-active-text-color: #ffffff;
+  --el-button-active-border-color: #529b2e;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* Warning Button */
+.el-button--warning {
+  --el-button-bg-color: var(--el-color-warning);
+  --el-button-text-color: #ffffff;
+  --el-button-border-color: var(--el-color-warning);
+  border-radius: 4px;
+}
+
+/* Danger Button */
+.el-button--danger {
+  --el-button-bg-color: var(--el-color-danger);
+  --el-button-text-color: #ffffff;
+  --el-button-border-color: var(--el-color-danger);
+  border-radius: 4px;
+}
+
+/* Info Button */
+.el-button--info {
+  border-radius: 4px;
+}
+
+/* Small buttons */
+.el-button--small {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+/* Mini buttons */
+.el-button--mini {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/* Tables — EMS-main style */
+.el-table {
+  border: 1px solid var(--el-border-color-lighter) !important;
+  border-radius: 0 !important;
+  font-size: 14px;
+  overflow: hidden;
+}
+.el-table th.el-table__cell {
+  background: #f8f8f8 !important;
+  color: #666666 !important;
+  font-weight: 500 !important;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 8px 10px !important;
+}
+.el-table td.el-table__cell {
+  color: var(--el-text-color-regular) !important;
+  padding: 8px 10px !important;
+}
+.el-table--border .el-table__cell {
+  border-right: 1px solid var(--el-border-color-lighter) !important;
+}
+.el-table--border .el-table__inner-wrapper,
+.el-table--border .el-table__border-wrapper {
+  border: none !important;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  background: #fafafa !important;
+}
+.el-table__body tr:hover > td {
+  background-color: #ecf5ff !important;
+}
+
+/* Table empty state */
+.el-empty__description p {
+  color: var(--el-text-color-secondary) !important;
+}
+
+/* Dialog */
+.el-dialog {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
+}
+.el-dialog__header {
+  padding: 16px 20px 0 !important;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--el-text-color-primary);
+}
+.el-dialog__body {
+  padding: 16px 20px !important;
+  color: var(--el-text-color-regular);
+}
+.el-dialog__footer {
+  padding: 0 20px 16px !important;
+  border-top: none !important;
+}
+
+/* Form items */
+.el-form-item__label {
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  color: var(--el-text-color-regular) !important;
+}
+
+/* Input fields */
+.el-input__wrapper {
+  border-radius: 4px !important;
+  box-shadow: 0 0 0 1px var(--el-border-color) inset !important;
+  padding: 4px 12px !important;
+}
+.el-input__wrapper:hover {
+  box-shadow: 0 0 0 1px var(--el-border-color-dark) inset !important;
+}
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px var(--el-color-primary) inset !important;
+}
+.el-input__inner {
+  font-size: 14px !important;
+  color: var(--el-text-color-primary) !important;
+}
+.el-input__inner::placeholder {
+  color: var(--el-text-color-placeholder) !important;
+}
+
+/* Select */
+.el-select .el-input__wrapper {
+  border-radius: 4px !important;
+}
+
+/* Input number */
+.el-input-number__decrease,
+.el-input-number__increase {
+  border-radius: 4px !important;
+}
+
+/* Textarea */
+.el-textarea__inner {
+  border-radius: 4px !important;
+  box-shadow: 0 0 0 1px var(--el-border-color) inset !important;
+  color: var(--el-text-color-primary) !important;
+}
+
+/* Tags */
+.el-tag {
+  border-radius: 4px !important;
+  font-weight: 400 !important;
+  padding: 0 8px !important;
+  font-size: 12px !important;
+  border: 1px solid !important;
+}
+.el-tag--primary {
+  background: #ecf5ff !important;
+  color: #409eff !important;
+  border-color: #d9ecff !important;
+}
+.el-tag--success {
+  background: #f0f9eb !important;
+  color: #67c23a !important;
+  border-color: #e1f3d8 !important;
+}
+.el-tag--warning {
+  background: #fdf6ec !important;
+  color: #e6a23c !important;
+  border-color: #faecd8 !important;
+}
+.el-tag--danger {
+  background: #fef0f0 !important;
+  color: #f56c6c !important;
+  border-color: #fde2e2 !important;
+}
+.el-tag--info {
+  background: #f4f4f5 !important;
+  color: #909399 !important;
+  border-color: #e9e9eb !important;
+}
+.el-tag--small {
+  font-size: 11px !important;
+  padding: 0 6px !important;
+  height: 22px !important;
+  line-height: 22px !important;
+}
+
+/* Steps */
+.el-steps--simple {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+.el-step.is-simple .el-step__head.is-finish {
+  color: var(--el-color-primary) !important;
+  border-color: var(--el-color-primary) !important;
+}
+.el-step.is-simple .el-step__head.is-process {
+  color: var(--el-color-primary) !important;
+  border-color: var(--el-color-primary) !important;
+}
+.el-step.is-simple .el-step__main .el-step__title.is-finish {
+  color: var(--el-color-primary) !important;
+}
+.el-step.is-simple .el-step__main .el-step__title.is-process {
+  color: var(--el-text-color-primary) !important;
+}
+.el-step.is-simple .el-step__arrow::before,
+.el-step.is-simple .el-step__arrow::after {
+  background: var(--el-border-color) !important;
+}
+
+/* Alert */
+.el-alert {
+  border-radius: 4px !important;
+}
+.el-alert--success {
+  background: #f0f9eb !important;
+  color: #67c23a !important;
+}
+.el-alert--warning {
+  background: #fdf6ec !important;
+  color: #e6a23c !important;
+}
+
+/* Descriptions */
+.el-descriptions__title {
+  font-weight: 500 !important;
+  color: var(--el-text-color-primary) !important;
+}
+.el-descriptions--border .el-descriptions__cell {
+  border: 1px solid var(--el-border-color-lighter) !important;
+}
+.el-descriptions__label.el-descriptions__cell {
+  background: #f8f8f8 !important;
+  color: var(--el-text-color-secondary) !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+}
+.el-descriptions__content.el-descriptions__cell {
+  color: var(--el-text-color-regular) !important;
+  font-size: 13px !important;
+}
+
+/* Menu */
+.el-menu {
+  border-right: none !important;
+}
+.el-menu-item {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+.el-menu-item.is-active {
+  font-weight: 500 !important;
+}
+
+/* Radio group — horizontal selectors */
+.el-radio__label {
+  font-size: 13px !important;
+  color: var(--el-text-color-regular) !important;
+}
+.el-radio__input.is-checked .el-radio__inner {
+  background: var(--el-color-primary) !important;
+  border-color: var(--el-color-primary) !important;
+}
+
+/* Message box */
+.el-message-box {
+  border-radius: 8px !important;
+}
+.el-message-box__title {
+  font-weight: 500 !important;
+  color: var(--el-text-color-primary) !important;
+}
+.el-message-box__message {
+  color: var(--el-text-color-regular) !important;
+}
+
+/* Message (toast) */
+.el-message {
+  border-radius: 4px !important;
+}
+
+/* Pagination */
+.el-pagination {
+  font-weight: 400 !important;
+}
+.el-pagination.is-background .el-pager li.is-active {
+  background: var(--el-color-primary) !important;
+}
+
+/* Dropdown */
+.el-dropdown-menu__item:hover {
+  background: #ecf5ff !important;
+  color: var(--el-color-primary) !important;
+}
+
+/* Switch */
+.el-switch.is-checked .el-switch__core {
+  border-color: var(--el-color-primary) !important;
+  background-color: var(--el-color-primary) !important;
+}
+
+/* Progress */
+.el-progress-bar__inner {
+  background: var(--el-color-primary) !important;
+}
+
+/* Collapse */
+.el-collapse-item__header {
+  font-weight: 500 !important;
+}

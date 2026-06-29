@@ -1,0 +1,17 @@
+export default [
+  { path: 'dashboard', name: 'AdminDashboard', component: () => import('../views/admin/Dashboard.vue'), meta: { title: '首页' } },
+  { path: 'plans', name: 'Plans', component: () => import('../views/admin/PlanManagement.vue'), meta: { title: '教学计划管理' } },
+  { path: 'status-board', name: 'StatusBoard', component: () => import('../views/admin/StatusBoard.vue'), meta: { title: '状态看板' } },
+  { path: 'scheduling', name: 'Scheduling', component: () => import('../views/admin/Scheduling.vue'), meta: { title: '排课管理' } },
+  { path: 'reports', name: 'Reports', component: () => import('../views/admin/Reports.vue'), meta: { title: '任务书与课表' } },
+  { path: 'config-rules', name: 'ConfigRules', component: () => import('../views/admin/ConfigRules.vue'), meta: { title: '教学限制配置' } },
+  { path: 'college-audit', name: 'CollegeAudit', component: () => import('../views/admin/CollegeAudit.vue'), meta: { title: '学院审核' } },
+  { path: 'app-board', name: 'AppBoard', component: () => import('../views/admin/AppBoard.vue'), meta: { title: '申报看板' } },
+  { path: 'assign', name: 'Assign', component: () => import('../views/admin/Assign.vue'), meta: { title: '教师分配' } },
+  { path: 'task-pool', name: 'TaskPool', component: () => import('../views/admin/TaskPool.vue'), meta: { title: '任务池' } },
+  { path: 'notices', name: 'AdminNotices', component: () => import('../views/admin/NoticeManage.vue'), meta: { title: '公告管理' } },
+  { path: 'exam-plans', name: 'ExamPlans', component: () => import('../views/admin/ExamPlanManage.vue'), meta: { title: '考试安排' } },
+  { path: 'room-plans', name: 'RoomPlans', component: () => import('../views/admin/RoomPlanManage.vue'), meta: { title: '教室安排' } },
+  { path: 'courses', name: 'AdminCourses', component: () => import('../views/admin/CourseManage.vue'), meta: { title: '课程管理' } },
+  { path: 'rule-config', name: 'RuleConfig', component: () => import('../views/admin/RuleConfig.vue'), meta: { title: '规则配置' } },
+]
