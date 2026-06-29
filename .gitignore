@@ -1,7 +1,0 @@
-target/
-node_modules/
-dist/
-.class
-*.log
-.vscode/
-.idea/
